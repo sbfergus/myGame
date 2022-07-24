@@ -1,0 +1,41 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 200;
+    --saturation: 50%;
+    --foreground-color: hsl(var(--hue), var(--saturation), 75%);
+    --background-color: hsl(var(--hue), var(--saturation), 20%);
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+.level1 {
+    display: block;
+}
+
+.level2 .level3 {
+    display: none;
+}
+
+.paddle {
+    --position: 50;
+
+    position: absolute;
+    background-color: var(--foreground-color);
+    left: calc(var(--position) * 1vw);
+    transform: translateX(-50%);
+    height: 1vh;
+    width: 10vh;
+    bottom: 1vh;
+}
+
+.level-title {
+    font-weight: bold;
+    font-size: 4vh;
+    color: var(--foreground-color);
+}

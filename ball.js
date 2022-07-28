@@ -24,10 +24,22 @@ export default class Ball {
         this.ballElem.style.setProperty("--y", value);
     }
 
+    rect() {
+        return this.ballElem.getBoundingClientRect();
+    }
+
     update(delta) {
         //this.x = ;
+        //console.log(this.y)
         this.y += vy;
         vy += gravity;
+        
+        const rect = this.rect();
+        if (rect.bottom >= window.innerHeight || rect.top <= 0) {
+            
+            vy *= -1;
+        }
+
     }
 }
 

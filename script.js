@@ -17,3 +17,4 @@ function update(time) {
 
 // start update loop on load
 window.requestAnimationFrame(update)
+//console.log(window.innerHeight)

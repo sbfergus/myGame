@@ -23,7 +23,7 @@ body {
     display: none;
 }
 
-.paddle {
+#paddle {
     --position: 50;
 
     position: absolute;

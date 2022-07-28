@@ -36,7 +36,7 @@ export default class Ball {
         this.y += vy;
         vy += gravity;
         const deltaY = this.y - lastY;
-        console.log(deltaY);
+        //console.log(deltaY);
         const rect = this.rect();
         if (rect.bottom >= (window.innerHeight) || rect.top <= 0) {
             vy *= -1;

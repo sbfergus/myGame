@@ -1,6 +1,8 @@
-import Ball from './Ball.js'
+import Ball from './Ball.js';
+import Paddle from './Paddle.js';
 
 const ball = new Ball(document.getElementById('ball'));
+const playerPaddle = new Paddle(document.getElementById('player-paddle'));
 
 let lastTime;
 

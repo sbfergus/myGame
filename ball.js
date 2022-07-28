@@ -1,4 +1,7 @@
-
+let gravity = 0.1;
+let bounce = 0.7;
+let vx = 0;
+let vy = -.0025;
 
 export default class Ball {
     constructor(ballElem) {
@@ -22,7 +25,9 @@ export default class Ball {
     }
 
     update(delta) {
-
+        //this.x = ;
+        this.y += vy;
+        vy += gravity;
     }
 }
 

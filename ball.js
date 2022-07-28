@@ -1,6 +1,6 @@
 let gravity = 0.1;
 let bounce = 0.9;
-let vx = 0;
+let vx = .5;
 let vy = 0;
 let vh = Math.round(window.innerHeight / 100);
 let lastY;
@@ -34,14 +34,15 @@ export default class Ball {
         //this.x = ;
         //console.log(this.y)
         this.y += vy;
+        this.x += vx;
         vy += gravity;
         const deltaY = this.y - lastY;
         //console.log(deltaY);
         const rect = this.rect();
-        // if (rect.bottom >= (window.innerHeight) || rect.top <= 0) {
-        //     vy *= -1;
-        //     vy *= bounce;
-        // }
+        console.log(rect)
+        if (rect.x <= 0 || rect.x >= window.innerWidth) {
+            vx *= -1;
+        }
         lastY = this.y;
         //console.log(rect.width)
         if(deltaY<0 && deltaY>-0.4) {

@@ -54,3 +54,22 @@ body {
     width: 2.5vh;
     height: 2.5vh;
 }
+
+.bumper {
+    position: absolute;
+    border: 3px solid red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    width: 8vh;
+    height: 8vh;
+}
+
+#bumper1 {
+    top: 20vh;
+    left: 30vw;
+}
+
+#bumper2 {
+    top: 60vh;
+    left: 60vw;
+}

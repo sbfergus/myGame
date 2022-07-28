@@ -31,13 +31,12 @@ export default class Ball {
     }
     
     update(delta, paddleRect) {
-        //this.x = ;
-        //console.log(this.y)
+        
         this.y += vy;
         this.x += vx;
         vy += gravity;
         const deltaY = this.y - lastY;
-        //console.log(deltaY);
+        
         const rect = this.rect();
         console.log(rect)
         if (rect.x <= 0 || rect.x >= window.innerWidth) {

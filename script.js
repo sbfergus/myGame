@@ -2,7 +2,7 @@ import Ball from './Ball.js';
 import Paddle from './Paddle.js';
 
 const ball = new Ball(document.getElementById('ball'));
-const playerPaddle = new Paddle(document.getElementById('paddle'));
+const paddle = new Paddle(document.getElementById('paddle'));
 
 let lastTime;
 
@@ -10,7 +10,7 @@ let lastTime;
 function update(time) {
     if (lastTime != null) {
         const delta = time - lastTime;           // time between frames
-        ball.update(delta);
+        ball.update(delta, [paddle.rect()]);
     }
     
     lastTime = time;
@@ -18,7 +18,7 @@ function update(time) {
 }
 
 document.addEventListener("mousemove", e => {
-    playerPaddle.position = (e.x / window.innerHeight) *100;
+    paddle.position = (e.x / window.innerHeight) *100;
 })
 
 // start update loop on load

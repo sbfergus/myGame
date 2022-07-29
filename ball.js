@@ -38,7 +38,7 @@ export default class Ball {
         const deltaY = this.y - lastY;
         
         const rect = this.rect();
-        console.log(rect)
+        //console.log(rect)
         if (rect.x <= 0 || rect.x >= window.innerWidth) {
             vx *= -1;
         }
@@ -47,7 +47,7 @@ export default class Ball {
         if(deltaY<0 && deltaY>-0.4) {
             vy=0;
         }
-        console.log(paddleRect);
+        //console.log(paddleRect);
         if (paddleRect.some(r => isCollision(r, rect))) {
             vy *= -1;
             vy *= bounce;

@@ -4,6 +4,9 @@ import Bumper from './Bumper.js';
 
 const ball = new Ball(document.getElementById('ball'));
 const paddle = new Paddle(document.getElementById('paddle'));
+const bumper1 = new Bumper(document.getElementById('bumper1'));
+const bumper2 = new Bumper(document.getElementById('bumper2'));
+
 
 let lastTime;
 
@@ -24,3 +27,4 @@ document.addEventListener("mousemove", e => {
 
 // start update loop on load
 window.requestAnimationFrame(update)
+console.log(bumper1.x, bumper1.y)

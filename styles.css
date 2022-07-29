@@ -60,16 +60,22 @@ body {
     border: 3px solid red;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    width: 8vh;
-    height: 8vh;
+    width: 8vw;
+    height: 8vw;
 }
 
 #bumper1 {
-    top: 20vh;
-    left: 30vw;
+    --x: 20;
+    --y: 30;
+
+    top: calc(var(--y) * 1vh);
+    left: calc(var(--x) * 1vw);
 }
 
 #bumper2 {
-    top: 60vh;
-    left: 60vw;
+    --x: 60;
+    --y: 60;
+
+    top: calc(var(--y) * 1vh);
+    left: calc(var(--x) * 1vw);
 }

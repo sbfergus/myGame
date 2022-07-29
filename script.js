@@ -1,5 +1,6 @@
 import Ball from './Ball.js';
 import Paddle from './Paddle.js';
+import Bumper from './Bumper.js';
 
 const ball = new Ball(document.getElementById('ball'));
 const paddle = new Paddle(document.getElementById('paddle'));

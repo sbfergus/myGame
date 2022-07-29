@@ -65,8 +65,8 @@ body {
 }
 
 #bumper1 {
-    --x: 20;
-    --y: 30;
+    --x: 50;
+    --y: 50;
 
     top: calc(var(--y) * 1vh);
     left: calc(var(--x) * 1vw);

@@ -9,12 +9,12 @@ const bumper2 = new Bumper(document.getElementById('bumper2'));
 
 
 let lastTime;
-
+console.log([bumper1.r, bumper1.x, bumper1.y])
 // function to update game after every frame, infinite loop
 function update(time) {
     if (lastTime != null) {
         const delta = time - lastTime;           // time between frames
-        ball.update(delta, [paddle.rect()]);
+        ball.update(delta, [paddle.rect()], [bumper1.r, bumper1.x, bumper1.y]);
     }
     
     lastTime = time;
@@ -27,4 +27,4 @@ document.addEventListener("mousemove", e => {
 
 // start update loop on load
 window.requestAnimationFrame(update)
-console.log(bumper1.x, bumper1.y)
+//console.log(bumper1.x, bumper1.y)

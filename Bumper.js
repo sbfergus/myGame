@@ -1,5 +1,3 @@
-let radius = document.querySelector('.bumper').clientHeight / 2;
-console.log(radius)
 
 export default class Bumper {
     constructor(bumperElem) {
@@ -14,10 +12,9 @@ export default class Bumper {
         return parseFloat(getComputedStyle(this.bumperElem).getPropertyValue("--y"));
     }
 
-    dist(ballX, ballY, bumperCenterX, bumperCenterY) {
-        // const bumperCenterX = this.x;
-        // const bumperCenterY = this.y;
-
-        return ;
+    get r() {
+        return parseFloat(getComputedStyle(this.bumperElem).getPropertyValue("--y") / 2);
     }
+
+    
 }
